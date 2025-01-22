@@ -1,0 +1,43 @@
+<!-- Untitled.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat WhatsApp</title>
+    <link rel="stylesheet" href="des.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela de Login -->
+        <div id="loginScreen" class="login-screen">
+            <div class="login-box">
+                <h2>Login do Chat</h2>
+                <input type="text" id="username" placeholder="Usuário" />
+                <input type="password" id="password" placeholder="Senha" />
+                <button onclick="fazerLogin()">Entrar</button>
+                <p id="loginError" class="error-message"></p>
+            </div>
+        </div>
+
+        <!-- Tela do Chat -->
+        <div id="chatScreen" class="chat-screen" style="display: none;">
+            <div class="chat-header">
+                <span id="currentUser"></span>
+                <button onclick="fazerLogout()" class="logout-btn">Sair</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Mensagens serão inseridas aqui -->
+            </div>
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="Digite sua mensagem..." />
+                <button onclick="enviarMensagem()">Enviar</button>
+            </div>
+        </div>
+    </div>
+    <script src="des.js"></script>
+</body>
+</html>
+
+
+
